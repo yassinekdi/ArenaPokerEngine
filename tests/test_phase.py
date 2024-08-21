@@ -10,11 +10,8 @@ class TestPokerPhase(unittest.TestCase):
     def setUp(self):
         self.nb_players = 4
         self.game = Game(players=self.nb_players)
-        self.logger = GameLogger(game=self.game,
-                                 log_to_console=False,
-                                 log_to_file=False)
         self.action_handler = ActionHandler(game=self.game,
-                                            logger=self.logger)
+                                            logger=None)
         self.small_blind = 10
         self.big_blind = 20
 
