@@ -1,14 +1,13 @@
 [tool.poetry]
-name = "game_engine"
-version = "0.1.0"
+name = "poker_game_engine"
+version = "0.1.2"
 description = "Game engine for poker game"
 authors = ["Yassine K"]
 license = "MIT"
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.12"
-
+python = ">=3.7,<4.0"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.3.2"

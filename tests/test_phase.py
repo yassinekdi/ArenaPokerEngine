@@ -1,19 +1,8 @@
-# between phase -------
-# Player flop becomes inactive
-
-# bankrolls/bets are conserved& correct
-
-# calls everywhere
-
-# between rounds ---------
-# check if dealer moves
-
-
 from decorators import verify_game_phase
 import unittest
-from game_engine import Game
-from action_handlers import ActionHandler
-from game_logger import GameLogger
+from poker_game_engine.game_engine import Game
+from poker_game_engine.action_handlers import ActionHandler
+from poker_game_engine.game_logger import GameLogger
 
 
 class TestPokerPhase(unittest.TestCase):

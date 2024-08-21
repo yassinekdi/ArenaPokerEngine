@@ -1,6 +1,7 @@
 from random import shuffle
 from itertools import combinations
 from collections import Counter
+from poker_game_engine.constants import rank_values, hand_rankings, card_suits, card_values
 
 class Card:
     '''
@@ -17,8 +18,8 @@ class Deck:
     '''
     Represents a deck of playing cards. Provides methods to create a deck and deal cards.
     '''
-    suits = ['Hearts', 'Diamonds', 'Clubs', 'Spades']
-    values = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A']
+    suits = card_suits
+    values = card_values
 
     def __init__(self):
         self.cards = [Card(suit, value) for suit in Deck.suits for value in Deck.values]
@@ -163,19 +164,8 @@ class Game:
 class HandEvaluator:
     def __init__(self):
         # Rank values to compare hands
-        self.rank_values = {'2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9, '10': 10, 'J': 11, 'Q': 12, 'K': 13, 'A': 14}
-        self.hand_rankings = {
-            0: "High Card",
-            1: "One Pair",
-            2: "Two Pair",
-            3: "Three of a Kind",
-            4: "Straight",
-            5: "Flush",
-            6: "Full House",
-            7: "Four of a Kind",
-            8: "Straight Flush",
-            9: "Royal Flush"  # Adding Royal Flush explicitly
-        }
+        self.rank_values = rank_values
+        self.hand_rankings = hand_rankings
 
     def evaluate_hand(self, cards: list) -> tuple:
         values = sorted(self.rank_values[card.value] for card in cards)

@@ -1,6 +1,6 @@
-from game_engine import Player, Game
-from game_logger import GameLogger
-from constants import actions_vals
+from poker_game_engine.game_engine import Player, Game
+from poker_game_engine.game_logger import GameLogger
+from poker_game_engine.constants import actions_vals
 
 class ActionHandler:
     '''
@@ -64,7 +64,7 @@ class ActionHandler:
 
     def player_action_input(self, player: Player,choice: str, amount_bet=0) -> bool:
         '''
-        Prompts the player for their action and processes it.
+        Gets the player for their action and processes it.
         '''
         if choice == '1':
             self.handle_fold(player)

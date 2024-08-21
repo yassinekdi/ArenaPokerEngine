@@ -1,5 +1,5 @@
 import logging
-from game_engine import Game
+from poker_game_engine.game_engine import Game
 
 class GameLogger:
     '''

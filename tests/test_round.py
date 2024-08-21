@@ -1,7 +1,7 @@
 import unittest
-from game_engine import Game
-from action_handlers import ActionHandler
-from game_logger import GameLogger
+from poker_game_engine.game_engine import Game
+from poker_game_engine.action_handlers import ActionHandler
+from poker_game_engine.game_logger import GameLogger
 from decorators import verify_game_phase
 
 class TestPokerRound(unittest.TestCase):

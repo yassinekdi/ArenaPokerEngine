@@ -1,5 +1,5 @@
 import unittest
-from game_engine import Card, HandEvaluator
+from poker_game_engine.game_engine import Card, HandEvaluator
 
 class TestHandEvaluator(unittest.TestCase):
     def setUp(self):

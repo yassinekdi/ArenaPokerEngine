@@ -1,6 +1,6 @@
-from game_engine import Game
-from action_handlers import ActionHandler
-from game_logger import GameLogger
+from poker_game_engine.game_engine import Game
+from poker_game_engine.action_handlers import ActionHandler
+from poker_game_engine.game_logger import GameLogger
 
 def get_player_input(player,game_last_bet):
     amount=0
@@ -123,8 +123,6 @@ def run_game_simulation():
 
         # Move dealer
         game.move_dealer()
-    winners = game.rank_players()
-    print('Done')
 
 
 
