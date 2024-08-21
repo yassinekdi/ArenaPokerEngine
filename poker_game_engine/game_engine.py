@@ -133,7 +133,8 @@ class Game:
             "pot": self.pot,
             "community_cards": community_cards,
             "current_player_id": self.current_player_id,
-            "phase": self.phase
+            "phase": self.phase,
+            "last_bet": self.last_bet,
         }
 
         return game_state
